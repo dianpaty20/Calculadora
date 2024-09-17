@@ -1,0 +1,279 @@
+/* Resetting default margin and padding */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    color: #333;
+}
+
+#sidebar {
+    background-color: #2c3e50; /* Fondo oscuro para el menú */
+    color: white;
+    width: 200px;
+    height: 100vh; /* Altura completa de la pantalla */
+    position: fixed; /* Menú fijo */
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #34495e; /* Línea divisoria */
+}
+
+#sidebar ul li a {
+    text-decoration: none; /* Sin subrayado en los links */
+    color: white; /* Color blanco para los enlaces por defecto */
+    display: block;
+    font-size: 16px;
+    background-color: transparent; /* Fondo transparente por defecto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+#sidebar ul li a.active {
+    background-color: white; /* Cambia el fondo a blanco cuando está activo */
+    color: #2c3e50; /* Color del texto oscuro cuando está activo */
+    font-weight: bold; /* Negrita para resaltar el texto */
+    border-left: 5px solid #2980b9; /* Barra azul para destacar la opción activa */
+}
+
+#sidebar ul li a:hover {
+    background-color: #34495e; /* Cambia el fondo cuando pasas el cursor */
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%; /* Menú ocupa el 100% del ancho en pantallas pequeñas */
+        height: auto;
+        position: relative;
+        box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+    }
+
+    #sidebar ul li {
+        text-align: center;
+    }
+}
+
+#content {
+    margin-left: 220px;
+    padding: 40px;
+    width: calc(100% - 220px);
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-addon {
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #bdc3c7;
+    font-size: 14px; 
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: normal;
+    text-align: center; /* Centrar el texto de los encabezados */
+}
+
+table td {
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+table tr:hover td {
+    background-color: #dcdde1;
+}
+
+/* Botones centrados horizontalmente */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Espacio entre botones */
+}
+
+button, .new-calculation-button, .btn-success {
+    padding: 15px 30px; /* Aumentar el tamaño del botón */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Asegurar que el texto esté centrado */
+    max-width: 200px; /* Establecer un ancho máximo opcional */
+}
+
+button:hover, .new-calculation-button:hover, .btn-success:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    #content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    #sidebar ul li {
+        text-align: center;
+    }
+}
+
+.new-calculation-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Aumentar el tamaño del botón */
+    border-radius: 3px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-calculation-button:hover {
+    background-color: #2980b9;
+}
+
+.btn-success {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Aumentar el tamaño del botón */
+    border-radius: 3px;
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #2980b9;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.description-img {
+    max-width: 25%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.description-text {
+    font-size: 18px;
+    line-height: 1.5;
+    flex-grow: 1;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    #sidebar ul li {
+        text-align: center;
+    }
+
+    .description {
+        flex-direction: column;
+    }
+
+    .description-img {
+        max-width: 40%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .description-text {
+        text-align: center;
+    }
+}
+
+
